@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Earn</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f1f5f9;
+      text-align: center;
+    }
+    header {
+      background: #4527a0;
+      color: white;
+      padding: 22px;
+      font-size: 25px;
+      font-weight: bold;
+    }
+    .card {
+      background: white;
+      margin: 20px;
+      padding: 22px;
+      border-radius: 15px;
+      box-shadow: 0 3px 10px #ddd;
+    }
+    button {
+      background: #4527a0;
+      color: white;
+      border: none;
+      padding: 13px 24px;
+      border-radius: 8px;
+      font-size: 16px;
+      margin: 8px;
+    }
+    .points {
+      font-size: 30px;
+      color: #188038;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>🎬 Video Earn</header>
+
+  <div class="card">
+    <h2>Welcome!</h2>
+    <p>Watch videos and collect demo points.</p>
+    <p>Your Points</p>
+    <div class="points" id="points">0</div>
+    <button onclick="watchVideo()">Watch Demo Video</button>
+    <p id="message">Start collecting demo points!</p>
+  </div>
+
+  <div class="card">
+    <h3>📺 Featured Video</h3>
+    <p>Demo video area</p>
+    <p>Video content will be added later.</p>
+  </div>
+
+  <div class="card">
+    <h3>💰 Rewards</h3>
+    <p>These are demo points, not real money.</p>
+    <button onclick="showRewards()">View Rewards</button>
+    <p id="rewards"></p>
+  </div>
+
+  <script>
+    let points = 0;
+
+    function watchVideo() {
+      points += 10;
+      document.getElementById("points").textContent = points;
+      document.getElementById("message").textContent =
+        "Great! You earned 10 demo points.";
+    }
+
+    function showRewards() {
+      document.getElementById("rewards").textContent =
+        "Your demo balance: " + points + " points.";
+    }
+  </script>
+</body>
+  </html>
